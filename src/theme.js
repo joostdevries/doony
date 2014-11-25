@@ -346,11 +346,7 @@ jQuery(function($) {
     if(consoleHtml) {
         console.log('Running...');
         while ((commandArr = splitConsoleRe.exec(consoleHtml)) !== null) {
-            commandArrs.push(commandArr);
-        }
-        for(var i=0; i<commandArrs.length; i++) {
-            consoleHtml = consoleHtml.replace(commandArrs[i][0], '<b class="ant-target">' + commandArrs[i][0] + '</b>');
-            console.log(commandArrs[i][1]);
+            $('.console-output').html(consoleHtml.replace(commandArrs[i][0], '<b class="ant-target">' + commandArrs[i][0] + '</b>'));
         }
     }
     $("#l10n-footer").after("<span class='doony-theme'>Browsing Jenkins with " +
