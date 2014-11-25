@@ -665,13 +665,17 @@ jQuery(function($) {
 
     var consoleHtml = $('.console-output').html(),
         splitConsoleRe = /bash ci\.sh (\w+)/gi,
-        commandArr;
+        commandArr,
+        commandArrs = [];
 
     if(consoleHtml) {
         console.log('Running...');
         while ((commandArr = splitConsoleRe.exec(consoleHtml)) !== null) {
-            consoleHtml = consoleHtml.replace(commandArr[0], '<b class="ant-target">' + commandArr[0] + '</b>');
-            console.log(commandArr[1]);
+            commandArrs.push(commandArr);
+        }
+        for(var i=0; i<commandArrs.length; i++) {
+            consoleHtml = consoleHtml.replace(commandArrs[i][0], '<b class="ant-target">' + commandArrs[i][0] + '</b>');
+            console.log(commandArrs[i][1]);
         }
     }
     $("#l10n-footer").after("<span class='doony-theme'>Browsing Jenkins with " +
