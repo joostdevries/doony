@@ -639,8 +639,7 @@ textarea
  * If you hit consoleText you can view the raw console text, let's style that
  * too.
  */
-body > pre,
-#main-panel > pre {
+.console-output {
     font-size: 14px;
     background-color: #111;
     color: #eee;
