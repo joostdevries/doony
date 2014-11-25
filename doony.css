@@ -90,11 +90,11 @@ input::-moz-focus-inner {
   cursor: pointer;
   background-color: #f5f5f5;
   *background-color: #e6e6e6;
-  background-image: -moz-linear-gradient(top, white, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, white, #e6e6e6);
-  background-image: -o-linear-gradient(top, white, #e6e6e6);
-  background-image: linear-gradient(to bottom, white, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
   background-repeat: repeat-x;
   border: 1px solid #cccccc;
   *border: 0;
@@ -693,8 +693,7 @@ textarea {
  * too.
  */
 body > pre,
-#main-panel > pre,
-.console-output {
+#main-panel > pre {
   font-size: 14px;
   background-color: #111;
   color: #eee;
@@ -786,9 +785,9 @@ a.yuimenulabel, a.yuimenuitemlabel,
 
 .doony-circle-aborted {
   background: #999;
-  background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #cccccc 0%, #999999 100%);
-  background-image: -webkit-radial-gradient(3px 3px, circle cover, #cccccc, #999999);
-  background-image: radial-gradient(circle at 3px 3px, #cccccc 0%, #999999 100%);
+  background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #ccc 0%, #999 100%);
+  background-image: -webkit-radial-gradient(3px 3px, circle cover, #ccc, #999);
+  background-image: radial-gradient(circle at 3px 3px, #ccc 0%, #999 100%);
 }
 
 .doony-circle-failure {
