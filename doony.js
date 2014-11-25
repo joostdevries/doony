@@ -668,6 +668,7 @@ jQuery(function($) {
         commandArr;
 
     if(consoleHtml) {
+        console.log('Running...');
         while ((commandArr = splitConsoleRe.exec(consoleHtml)) !== null) {
             consoleHtml = consoleHtml.replace(commandArr[0], '<b class="ant-target">' + commandArr[0] + '</b>');
             console.log(commandArr[1]);
