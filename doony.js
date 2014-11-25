@@ -663,16 +663,23 @@ jQuery(function($) {
         }
     }
 
+
     var consoleHtml = $('.console-output').html(),
         splitConsoleRe = /bash ci\.sh (\w+)/gi,
-        commandArr;
+        commandArr,
+        commandArrs = [];
 
     if(consoleHtml) {
         console.log('Running...');
         while ((commandArr = splitConsoleRe.exec(consoleHtml)) !== null) {
-            $('.console-output').html(consoleHtml.replace(commandArr[0], '<b class="ant-target">' + commandArr[0] + '</b>'));
+            commandArrs.push(commandArr);
+        }
+        for(var i=0; i<commandArrs.length; i++) {
+            consoleHtml = consoleHtml.replace(commandArrs[i][0], '<b class="ant-target">' + commandArrs[i][0] + '</b>');
+            $('.console-output').html(consoleHtml);
         }
     }
+
     $("#l10n-footer").after("<span class='doony-theme'>Browsing Jenkins with " +
         "the <a target='_blank' href='https://github.com/kevinburke/doony'>" +
         "Doony theme</a></span>");
