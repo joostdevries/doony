@@ -663,7 +663,7 @@ jQuery(function($) {
         }
     }
 
-    var consoleHtml = $('.console.output').html(),
+    var consoleHtml = $('.console-output').html(),
         splitConsoleRe = /bash ci\.sh (\w+)/gi,
         commandArr;
 
